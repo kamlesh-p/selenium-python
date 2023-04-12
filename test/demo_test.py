@@ -3,12 +3,12 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-from test import DriverFactory
+from test import driver_factory
 from test.Browser import Browser
 
 user_name = "YOUR EMAILID"
 password = "YOUR PASSWORD"
-driver = DriverFactory.init_browser(Browser.CHROME)
+driver = driver_factory.init_browser(Browser.CHROME)
 driver.get("https://www.facebook.com")
 element = driver.find_element(By.ID, "email")
 element.send_keys(user_name)
